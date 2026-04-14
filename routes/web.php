@@ -59,3 +59,7 @@ Route::post('/formtest/delete', function () {
 // User Registration Routes
 Route::resource('users', UserController::class);
 Route::delete('/users/{user}/destroy', [UserController::class, 'destroy'])->name('users.destroy');
+
+// Books Library Routes
+use App\Http\Controllers\BookController;
+Route::resource('books', BookController::class);
